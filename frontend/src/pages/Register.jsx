@@ -1,6 +1,8 @@
 import React from "react";
-
+import styles from "./Design.module.css";
 import { Link } from "react-router-dom";
+
+// 37.30
 
 function Register() {
   const handleSubmit = (e) => {
@@ -11,33 +13,37 @@ function Register() {
   const handleChange = (e) => {};
 
   return (
-    <div>
+    <div className={styles.divForm}>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <div className="brand">
-          <img src="" alt="" />
-          <h1>Lokesh ChatApp</h1>
+        <div className={styles.brand}>
+          <img
+            src="https://logos.textgiraffe.com/logos/logo-name/Lokesh-designstyle-candy-m.png"
+            alt=""
+          />
+
+          <h1>ChatApp</h1>
         </div>
         <input
           type="text"
-          placeholder="username"
+          placeholder="Enter Username"
           name="username"
           onChange={(e) => handleChange(e)}
         />
         <input
           type="email"
-          placeholder="email"
+          placeholder="Enter Email"
           name="email"
           onChange={(e) => handleChange(e)}
         />
         <input
           type="password"
-          placeholder="password"
+          placeholder="Enter password"
           name="password"
           onChange={(e) => handleChange(e)}
         />
         <input
           type="password"
-          placeholder="Confirm Password"
+          placeholder="Enter Confirm Password"
           name="ConfirmPassword"
           onChange={(e) => handleChange(e)}
         />
